@@ -1,4 +1,137 @@
 * {
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-fondo-primario: #F3F5FC;
+    --color-fondo-secundario: #fff;
+    --color-secundario: #0A3871;
+    --color-boton-principal: #D8DFE8;
+
+}
+
+body {
+    background-color: var(--color-fondo-primario);
+    font-family: Inter;
+    font-size: ;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+header {
+    width: 10%;
+    text-align: center;
+}
+
+header img {
+    margin-top: 20%;
+}
+
+.contenido {
+    width: 92%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenido__entrada {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 7% 0 3% 0;
+}
+
+.contenido__entrada__texto {
+    height: 80%;
+}
+
+.contenido__entrada__texto__textarea {
+    background-color: var(--color-fondo-primario);
+    border: none;
+    resize: none;
+    font-size: 3.2rem;
+    color: var(--color-secundario);
+    height: 95%;
+    width: 100%;
+    background-color: var(--color-boton-principal);
+    border-radius: 2.4rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+
+.contenido__entrada__texto__info{
+    color: #495057;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.contenido__entrada__texto__textarea::placeholder{
+    color: var(--color-secundario);
+    opacity: 0.5;
+}
+
+.contenido__entrada__texto__textarea:focus{
+    outline: none;
+}   
+
+.contenido__entrada__botones {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.4rem;
+    align-items: center;
+    height: 20%;
+}
+
+.contenido__entrada__boton {
+    width: 40%;
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    font-size: 1.6rem;
+    background-color: var(--color-boton-principal);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+
+.contenido__entrada__boton:hover{
+    background-color: var(--color-secundario);
+    color: var(--color-fondo-secundario);
+    transform: scale(1.05);
+}
+
+.contenido__salida {
+    display: flex;
+}
+
+.contenido__salida__div {
+    margin: 10% 0;
+    border-radius: 32px;
+    background-color: var(--color-fondo-secundario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido__salida__img {
+    margin: 10% 10%;
+}
+
+.contenido__salida__mensaje{
+    font-size: 2.4rem;
+    margin: 0 10%;
+    text-align: center;
+}
+
+.contenido__salida__info {
+    font-size: 1.6rem;
+    margin: 10% 10%;
+    text-align: center;
+}
