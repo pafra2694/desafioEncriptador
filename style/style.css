@@ -230,3 +230,7 @@ header img {
         margin: 0;
     }
 }
+
+#boton_copiar {
+    display: none;
+}

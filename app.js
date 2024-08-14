@@ -24,7 +24,7 @@ function encriptarTexto() {
                     break;
             }
         }
-        mostrarTexto("textoProcesado", textoEncriptado);
+        mostrarTexto("textoProcesado", textoEncriptado);       
 }
 
 function desencriptarTexto() {
@@ -45,11 +45,13 @@ function mostrarTexto(idElemento, texto){
         elementoHTML.innerHTML = "Ingresa el texto que deseas encriptar o desencriptar.";
         document.getElementById("imagen_lupa").style.display="";
         document.getElementById("mensaje_salida").style.display="";
+        document.getElementById("boton_copiar").style.display = "";
     }
     else{
         document.getElementById("imagen_lupa").style.display="none";
         document.getElementById("mensaje_salida").style.display="none";
         elementoHTML.innerHTML = texto;
+        document.getElementById("boton_copiar").style.display = "block";
     }
     return;
 }
@@ -72,3 +74,15 @@ document.getElementById("textoUsuario").addEventListener("input", function() {
         document.getElementById("boton_desencriptar").removeAttribute("disabled");
     }
 });
+
+
+
+  const copiarTexto = async () => {
+    let textoCopiar = document.getElementById('textoProcesado').innerHTML;
+    try {
+      await navigator.clipboard.writeText(textoCopiar);
+      alert('Contenido copiado al portapapeles');
+    } catch (err) {
+      alert('Error al copiar: ', err);
+    }
+  }
