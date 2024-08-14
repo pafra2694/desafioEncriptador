@@ -21,11 +21,11 @@
         <section class="contenido__entrada">
             <div class="contenido__entrada__texto">
                 <textarea class="contenido__entrada__texto__textarea" placeholder="Ingrese el texo aquí..." id="textoUsuario"></textarea>
-                <div class="contenido__entrada__texto__info"><img src="assets/ilogo.png" alt="logo de i">Sólo letras minúsculas y sin acentos</div>
+                <div id="mensaje" class="contenido__entrada__texto__info"><img src="assets/ilogo.png" alt="logo de i">Sólo letras minúsculas y sin acentos</div>
             </div>
             <div class="contenido__entrada__botones">
-                <button class="contenido__entrada__boton" onclick="encriptarTexto()">Encriptar</button>
-                <button class="contenido__entrada__boton" onclick="desencriptarTexto()">Desencriptar</button>
+                <button class="contenido__entrada__boton" onclick="encriptarTexto()" id="boton_encriptar">Encriptar</button>
+                <button class="contenido__entrada__boton" onclick="desencriptarTexto()" id="boton_desencriptar">Desencriptar</button>
             </div>
         </section>
 

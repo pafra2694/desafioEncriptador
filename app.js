@@ -1,5 +1,3 @@
-let vocales = "aeiou";
-
 
 function encriptarTexto() {
     let texto = document.getElementById("textoUsuario").value;
@@ -55,3 +53,22 @@ function mostrarTexto(idElemento, texto){
     }
     return;
 }
+
+document.getElementById("textoUsuario").addEventListener("input", function() {
+    const textarea = this.value;
+    const regex = /^[a-z\s]+$/;
+
+    if (textarea === "") {
+        document.getElementById("mensaje").style.display = "none";
+        document.getElementById("boton_encriptar").removeAttribute("disabled");
+        document.getElementById("boton_desencriptar").removeAttribute("disabled");
+    } else if (!regex.test(textarea) || textarea.trim() === "") {
+        document.getElementById("mensaje").style.display = "flex";
+        document.getElementById("boton_encriptar").setAttribute("disabled","true");
+        document.getElementById("boton_desencriptar").setAttribute("disabled","true");
+    } else {
+        document.getElementById("mensaje").style.display = "none";
+        document.getElementById("boton_encriptar").removeAttribute("disabled");
+        document.getElementById("boton_desencriptar").removeAttribute("disabled");
+    }
+});
