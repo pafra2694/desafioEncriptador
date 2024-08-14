@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>    
@@ -19,23 +20,27 @@
 
         <section class="contenido__entrada">
             <div class="contenido__entrada__texto">
-                <textarea class="contenido__entrada__texto__textarea" placeholder="Ingrese el texo aquí..."></textarea>
+                <textarea class="contenido__entrada__texto__textarea" placeholder="Ingrese el texo aquí..." id="textoUsuario"></textarea>
                 <div class="contenido__entrada__texto__info"><img src="assets/ilogo.png" alt="logo de i">Sólo letras minúsculas y sin acentos</div>
             </div>
             <div class="contenido__entrada__botones">
-                <button class="contenido__entrada__boton">Encriptar</button>
-                <button class="contenido__entrada__boton">Desencriptar</button>
+                <button class="contenido__entrada__boton" onclick="encriptarTexto()">Encriptar</button>
+                <button class="contenido__entrada__boton" onclick="desencriptarTexto()">Desencriptar</button>
             </div>
         </section>
 
         <section class="contenido__salida">
             <div class="contenido__salida__div">
-                <img class="contenido__salida__img" src="assets/Muñeco.png" alt="Persona observando con lupa un diamante.">
-                <h2 class="contenido__salida__mensaje">Ningún Mensaje fue encontrado</h2>
-                <p class="contenido__salida__info">Ingresa el texto que deseas encriptar o desencriptar.</p>
+                <img id="imagen_lupa" class="contenido__salida__img" src="assets/Muñeco.png" alt="Persona observando con lupa un diamante.">
+                <h2 id="mensaje_salida" class="contenido__salida__mensaje">Ningún Mensaje fue encontrado</h2>
+                <p class="contenido__salida__info" id="textoProcesado">Ingresa el texto que deseas encriptar o desencriptar.</p>
             </div>
         </section>
 
     </main>
+    
+    
 </body>
+
+
 </html>
